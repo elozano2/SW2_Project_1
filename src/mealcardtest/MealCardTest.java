@@ -89,7 +89,7 @@ public class MealCardTest {
             else if(input == 4){
                 s.newStudent();
             }
-           
+           // Steven did everything in input 5
             else if(input == 5) {
             	 System.out.print("Please enter the name of the student: \n");
             	 String name = scan.nextLine();

@@ -1,6 +1,4 @@
-//HW3: Meal Card Test
-//Elijah Silang CS 2365
-//7-29-2019
+
 
 package MyUtility;
 

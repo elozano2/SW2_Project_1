@@ -8,6 +8,7 @@ public class Student {
     Scanner scan = new Scanner(System.in);
     public int count = 0;
     public String name;
+    public String access;
     public String address;
     public int age;
     public MealCard card = new MealCard();
@@ -19,6 +20,8 @@ public class Student {
       
         roster[count++] = newStudent;
         
+        System.out.print("Please imput the special rooms that new student has access to: ");
+        newStudent.access = scan.nextLine();
         System.out.print("Please input the address of the new student: ");
         newStudent.address = scan.nextLine();
         System.out.print("Please input the age of the new student: ");

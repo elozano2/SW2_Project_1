@@ -12,6 +12,7 @@ public class MealCardTest {
         Scanner scan = new Scanner(System.in);
         MyUtility.Student s = new MyUtility.Student();
         MyUtility.MealCard m = new MyUtility.MealCard();
+        MyUtility.Permissions p = new MyUtility.Permissions();
         MyUtility.Food f1 = new MyUtility.Food();
         MyUtility.Food f2 = new MyUtility.Food();
         MyUtility.Food f3 = new MyUtility.Food();
@@ -21,7 +22,7 @@ public class MealCardTest {
         String confirm = "y";
         while(confirm.equalsIgnoreCase("y")){
             System.out.print("Following are the available functions. What would you like to do today?\n");
-            System.out.print("1. Buy food\n2. Buy item\n3. Add funds to card\n4. Add new student\n");
+            System.out.print("1. Buy food\n2. Buy item\n3. Add funds to card\n4. Add new student\n5. View or change the permissions of a student\n");
             int input = scan.nextInt();
             //System.out.print("Press Enter to continue...");
             scan.nextLine();
@@ -88,6 +89,15 @@ public class MealCardTest {
             else if(input == 4){
                 s.newStudent();
             }
+           
+            else if(input == 5) {
+            	 System.out.print("Please enter the name of the student: \n");
+            	 String name = scan.nextLine();
+               //Checks to see if person exists or not
+            	 Student customer = new Student();
+            	 customer = s.getStudent(name);
+            	 p.Perm(customer);
+             }
             
             System.out.print("Would you like to continue? (Y/N)\n");
             confirm = scan.nextLine();

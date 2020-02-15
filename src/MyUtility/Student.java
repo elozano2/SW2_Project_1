@@ -1,6 +1,6 @@
-//Software Engineering II Project
-//Meal Plan Project
-//Elijah Silang
+//HW3: Meal Card Test
+//Elijah Silang CS 2365
+//7-29-2019
 
 package MyUtility;
 

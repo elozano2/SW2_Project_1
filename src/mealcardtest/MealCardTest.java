@@ -18,7 +18,7 @@ public class MealCardTest {
         MyUtility.Food f3 = new MyUtility.Food();
         f1.setPrices_Sam();
         f2.setPrices_Guy();
-        f3.setPrices_Lou()
+        f3.setPrices_Lou();
         String confirm = "y";
         while(confirm.equalsIgnoreCase("y")){
             System.out.print("Following are the available functions. What would you like to do today?\n");

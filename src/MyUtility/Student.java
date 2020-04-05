@@ -14,13 +14,15 @@ public class Student {
     public MealCard card = new MealCard();
     public Student[] roster = new Student[50];
     public void newStudent(){
+        //Adds student to system
         Student newStudent = new Student();
         System.out.print("Please input the name of the new student: ");
         newStudent.name = scan.nextLine();
       
         roster[count++] = newStudent;
         
-        System.out.print("Please imput the special rooms that new student has access to: ");
+        //Education Data
+        System.out.print("Please input the specific rooms that the new student has access to: ");
         newStudent.access = scan.nextLine();
         System.out.print("Please input the address of the new student: ");
         newStudent.address = scan.nextLine();

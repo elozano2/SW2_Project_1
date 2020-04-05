@@ -9,7 +9,7 @@ public class Food {
     
     public int price;
     public String itemName;
-    
+    //Food options for Sam's place
     public Food[] Sam = new Food[4];
     public void  setPrices_Sam(){
         Food hamburger = new Food();
@@ -28,12 +28,17 @@ public class Food {
         drink.itemName = "Soda";
         drink.price = 2;
         
+        Food chips = new Food();
+        chips.itemName = "Chips";
+        chips.price = 1;
+        
         Sam[0] = hamburger;
         Sam[1] = hotdog;
         Sam[2] = fries;
         Sam[3] = drink;
+        Sam[4] = chips;
     }
-    
+    //Food options for One Guy's Pizza
     public Food[] OneGuy = new Food[4];
     public void setPrices_Guy(){
         Food pizza  = new Food();
@@ -123,7 +128,7 @@ public class Food {
     }
     
     public Food getFoodSam(String itemName){
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 5; i++){
             if(Sam[i].itemName.equalsIgnoreCase(itemName)){
                 return Sam[i];
             }

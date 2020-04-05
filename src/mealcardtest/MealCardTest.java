@@ -16,9 +16,11 @@ public class MealCardTest {
         MyUtility.Food f1 = new MyUtility.Food();
         MyUtility.Food f2 = new MyUtility.Food();
         MyUtility.Food f3 = new MyUtility.Food();
+        MyUtility.Item k= new MyUtility.Item();
         f1.setPrices_Sam();
         f2.setPrices_Guy();
         f3.setPrices_Lou();
+        k.setPrices();
         String confirm = "y";
         while(confirm.equalsIgnoreCase("y")){
            //Asks what you like to do

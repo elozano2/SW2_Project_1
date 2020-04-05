@@ -21,12 +21,14 @@ public class MealCardTest {
         f3.setPrices_Lou();
         String confirm = "y";
         while(confirm.equalsIgnoreCase("y")){
+           //Asks what you like to do
             System.out.print("Following are the available functions. What would you like to do today?\n");
             System.out.print("1. Buy food\n2. Buy item\n3. Add funds to card\n4. Add new student\n5. View or change the permissions of a student\n");
             int input = scan.nextInt();
             //System.out.print("Press Enter to continue...");
             scan.nextLine();
             
+           //Choosing where to eat
             if(input == 1){
                 System.out.print("----------------------\n");
                 System.out.print("Where would you like to purchase food from?\n");
@@ -35,7 +37,7 @@ public class MealCardTest {
                 scan.nextLine();
                 
                 if(input_rest == 1){
-                    System.out.print("Welcome to Sam's Place. Please enter your name to identiy who will be making the purchase: ");
+                    System.out.print("Welcome to Sam's Place. Please enter your name to identify who will be making the purchase: ");
                     String name = scan.nextLine();
                     System.out.print("----------------------\n");
                     Student customer  = new Student();
@@ -43,7 +45,7 @@ public class MealCardTest {
                     f1.displayMenuSam(customer);
                 }
                 else if(input_rest == 2){
-                    System.out.print("Welcome to One Guy's Pizza. Please enter your name to identiy who will be making the purchase: ");
+                    System.out.print("Welcome to One Guy's Pizza. Please enter your name to identify who will be making the purchase: ");
                     String name = scan.nextLine();
                     System.out.print("----------------------\n");
                     Student customer  = new Student();
@@ -51,7 +53,7 @@ public class MealCardTest {
                     f2.displayMenuGuy(customer);
                 }
                 else if(input_rest == 3){
-                    System.out.print("Welcome to Lou's BBQ. Please enter your name to identiy who will be making the purchase: ");
+                    System.out.print("Welcome to Lou's BBQ. Please enter your name to identify who will be making the purchase: ");
                     String name = scan.nextLine();
                     System.out.print("----------------------\n");
                     Student customer  = new Student();

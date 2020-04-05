@@ -10,7 +10,7 @@ public class Food {
     public int price;
     public String itemName;
     //Food options for Sam's place
-    public Food[] Sam = new Food[4];
+    public Food[] Sam = new Food[5];
     public void  setPrices_Sam(){
         Food hamburger = new Food();
         hamburger.itemName = "Hamburger";
@@ -63,8 +63,8 @@ public class Food {
         OneGuy[3] = tea;
         
     }
-    
-    public Food[] Lou = new Food[4];
+    //Food options for Lou's BBQ
+    public Food[] Lou = new Food[6];
     public void setPrices_Lou(){
         Food brisket = new Food();
         brisket.itemName = "Brisket";
@@ -78,6 +78,14 @@ public class Food {
         turkey.itemName =  "Turkey";
         turkey.price = 13;
         
+        Food porkchops = new Food();
+        porkchops.itemName = "Pork_Chops";
+        porkchops.price = 9;
+        
+        Food bbqchicken = new Food();
+        bbqchicken.itemName = "BBQ_Chicken"
+        bbqchicken.price = 10;
+        
         Food beer = new Food();
         beer.itemName = "Beer";
         beer.price  = 4;
@@ -85,7 +93,9 @@ public class Food {
         Lou[0] = brisket;
         Lou[1] = ribs;
         Lou[2] = turkey;
-        Lou[3] = beer;
+        Lou[3] = porkchops;
+        Lou[4] = bbqchicken;
+        Lou[5] = beer;
     }
     
     
@@ -148,7 +158,7 @@ public class Food {
     }
     
     public Food getFoodLou(String itemName){
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 6; i++){
             if(Lou[i].itemName.equalsIgnoreCase(itemName)){
                 return Lou[i];
             }
@@ -158,7 +168,7 @@ public class Food {
     }
     
     public void displayMenu(Student student){
-        System.out.print("Hello, " + student.name + ". Following is the menu with the correspoinding prices.\n");
+        System.out.print("Hello, " + student.name + ". Following is the menu with the corresponding prices.\n");
         for(int i = 0; i < 4; i++){
             System.out.print(menu[i].itemName + ": " + menu[i].price + "\n");
         }
@@ -175,16 +185,18 @@ public class Food {
             System.out.print("Have a great day!\n");
         }
     }
-    
+    //Displays menu for Sam's Place
     public void displayMenuSam (Student student){
         System.out.print("Hello, " + student.name + ". Following is the menu with the corresponding prices. \n");
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 5; i++){
             System.out.print(Sam[i].itemName + ": " + Sam[i].price + "\n");
         }
+        //Making a purchase
         System.out.print("----------------------\n");
         System.out.print("What would you like to purchase?\n");
         String food = scan.nextLine();
         buyFood(getFoodSam(food), student);
+        //Making additional purchases
         System.out.print("Would you like to purchase more? (Y/N)\n");
         String input = scan.nextLine();
         if(input.equalsIgnoreCase("y")){
@@ -194,16 +206,18 @@ public class Food {
             System.out.print("Have a great day!\n");
         }
     }
-    
+    //Displays menu for One Guy's Pizza
         public void displayMenuGuy (Student student){
         System.out.print("Hello, " + student.name + ". Following is the menu with the corresponding prices. \n");
         for(int i = 0; i < 4; i++){
             System.out.print(OneGuy[i].itemName + ": " + OneGuy[i].price + "\n");
         }
+       //Making a purchase
         System.out.print("----------------------\n");
         System.out.print("What would you like to purchase?\n");
         String food = scan.nextLine();
         buyFood(getFoodGuy(food), student);
+        //Making additional purchases if necessary
         System.out.print("Would you like to purchase more? (Y/N)\n");
         String input = scan.nextLine();
         if(input.equalsIgnoreCase("y")){
@@ -213,16 +227,18 @@ public class Food {
             System.out.print("Have a great day!\n");
         }
     }
-        
+        //Displays menu for Lou's BBQ
             public void displayMenuLou (Student student){
         System.out.print("Hello, " + student.name + ". Following is the menu with the corresponding prices. \n");
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 6; i++){
             System.out.print(Lou[i].itemName + ": " + Lou[i].price + "\n");
         }
+        //Making a purchase
         System.out.print("----------------------\n");
         System.out.print("What would you like to purchase?\n");
         String food = scan.nextLine();
         buyFood(getFoodLou(food), student);
+        //Making additional purchases if necessary
         System.out.print("Would you like to purchase more? (Y/N)\n");
         String input = scan.nextLine();
         if(input.equalsIgnoreCase("y")){

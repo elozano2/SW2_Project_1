@@ -8,7 +8,6 @@ public class Item {
     
     public double price;
     public String itemName;
-    
     public Item[] menu = new Item[15];
     public void setPrices(){
     Item printer = new Item();
@@ -56,7 +55,8 @@ public class Item {
     Item calculator = new Item();
     calculaor.itemName = "Calculator"
     calculator.price = 25;
-    
+        
+    //Items available on the menu
     menu[0] = printer;
     menu[1] = scantron;
     menu[2] = bluebook;

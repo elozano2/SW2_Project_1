@@ -9,7 +9,7 @@ public class Item {
     public double price;
     public String itemName;
     
-    public Item[] menu = new Item[13];
+    public Item[] menu = new Item[15];
     public void setPrices(){
     Item printer = new Item();
     printer.itemName = "Print a Page";
@@ -50,6 +50,12 @@ public class Item {
     Item marker = new Item();
     marker.itemName = "Marker";
     marker.price = 2;
+    Item indexcard = new Item();
+    indexcard.itemName = "Index Card"
+    indexcard.price = 1;
+    Item calculator = new Item();
+    calculaor.itemName = "Calculator"
+    calculator.price = 25;
     
     menu[0] = printer;
     menu[1] = scantron;
@@ -64,8 +70,10 @@ public class Item {
     menu[10] = binder;
     menu[11] = waterbottle;
     menu[12] = backpack;
+    menu[13] = indexcard;
+    menu[14] = calculator;
     }
-    
+    //Displays the purchase that has been made and shows how much money is remaining on the student's balance
     public void buyItem(Item item, Student student){
         System.out.print(student.name + " has purchased a " + item.itemName + ".\n");
         System.out.print(item.price + " points have been deducted from " + student.name + "'s balance.\n");
@@ -74,7 +82,7 @@ public class Item {
     }
     public Item getItem(String itemName){
         Item item = new Item();
-        for(int i = 0; i < 13; i++){
+        for(int i = 0; i < 15; i++){
             if(menu[i].itemName.equalsIgnoreCase(itemName)){
                 return menu[i];
             }
@@ -82,9 +90,10 @@ public class Item {
         System.out.print("Item not found.\n");
         return null;
     }
+    //Displays the items available for purchase
     public void display_Menu(Student student){
         System.out.print("Hello, " + student.name + ". Following is the menu with the correspoinding prices.\n");
-        for(int i = 0; i < 13; i++){
+        for(int i = 0; i < 15; i++){
             System.out.print(menu[i].itemName + ": " + menu[i].price + "\n");
         }
         System.out.print("----------------------\n");

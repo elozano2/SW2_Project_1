@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MealCard {
     Scanner scan = new Scanner(System.in);
     public int balance;
-    public double rc balance;
+    public double rcbalance;
     public void cardIssue(Student student){
         //Choosing a meal plan
         System.out.print("Would you like to specify a meal plan amount and RaiderCash amount? (Y/N)\n");

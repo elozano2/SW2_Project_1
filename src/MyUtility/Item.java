@@ -50,10 +50,10 @@ public class Item {
     marker.itemName = "Marker";
     marker.price = 2;
     Item indexcard = new Item();
-    indexcard.itemName = "Index Card"
+    indexcard.itemName = "Index Card";
     indexcard.price = 1;
     Item calculator = new Item();
-    calculaor.itemName = "Calculator"
+    calculator.itemName = "Calculator";
     calculator.price = 25;
         
     //Items available on the menu

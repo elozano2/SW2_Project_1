@@ -83,7 +83,7 @@ public class Food {
         porkchops.price = 9;
         
         Food bbqchicken = new Food();
-        bbqchicken.itemName = "BBQ_Chicken"
+        bbqchicken.itemName = "BBQ_Chicken";
         bbqchicken.price = 10;
         
         Food beer = new Food();

@@ -1,16 +1,39 @@
 package net.codejava.ws;
 
 import java.util.Scanner;
+import javax.xml.bind.annotation.XmlElement;
+import  javax.xml.bind.annotation.XmlRootElement;
 
 
-
+@XmlRootElement(name="item")
 public class Item {
-    static Scanner scan = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
     
     public double price;
     public String itemName;
     
-    public static Item[] menu = new Item[13];
+    public Item() {
+    	double price;
+    	String itemName;
+    }
+    
+    public double getPrice() {
+		return price;
+	}
+    @XmlElement
+	public void setName(double price) {
+		this.price = price;
+	}
+    
+    public String getItemName() {
+		return itemName;
+	}
+    @XmlElement
+	public void setName(String itemName) {
+		this.itemName = itemName;
+	}
+    
+    public Item[] menu = new Item[13];
     public void setPrices(){
     Item printer = new Item();
     printer.itemName = "Print a Page";
@@ -67,13 +90,13 @@ public class Item {
     menu[12] = backpack;
     }
     
-    public static void buyItem(Item item, Student student){
+    public void buyItem(Item item, Student student){
         System.out.print(student.name + " has purchased a " + item.itemName + ".\n");
         System.out.print(item.price + " points have been deducted from " + student.name + "'s balance.\n");
-        //student.card.rcbalance -= item.price;
-        //System.out.print(student.name + "'s balance is now " + student.card.rcbalance + "\n");
+        student.card.rcbalance -= item.price;
+        System.out.print(student.name + "'s balance is now " + student.card.rcbalance + "\n");
     }
-    public static Item getItem(String itemName){
+    public Item getItem(String itemName){
         Item item = new Item();
         for(int i = 0; i < 13; i++){
             if(menu[i].itemName.equalsIgnoreCase(itemName)){
@@ -83,7 +106,7 @@ public class Item {
         System.out.print("Item not found.\n");
         return null;
     }
-    public static void display_Menu(Student student){
+    public void display_Menu(Student student){
         System.out.print("Hello, " + student.name + ". Following is the menu with the correspoinding prices.\n");
         for(int i = 0; i < 13; i++){
             System.out.print(menu[i].itemName + ": " + menu[i].price + "\n");

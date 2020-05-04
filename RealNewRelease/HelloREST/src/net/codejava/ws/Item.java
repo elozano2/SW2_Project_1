@@ -115,13 +115,13 @@ public class Item {
         System.out.print("What would you like to purchase?\n");
         String item = scan.nextLine();
         buyItem(getItem(item), student);
-        System.out.print("Would you like to purchase more? (Y/N)\n");
+        System.out.print("Would you like to make another purchase? (Y/N)\n");
         String input = scan.nextLine();
         if(input.equalsIgnoreCase("y")){
             display_Menu(student);
         }
         else if(input.equalsIgnoreCase("n")){
-            System.out.print("Have a great day!\n");
+            System.out.print("Have a wonderful day!\n");
         }
     }
     
